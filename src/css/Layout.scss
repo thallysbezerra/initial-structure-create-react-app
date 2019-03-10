@@ -2,23 +2,21 @@
 
 .container {
     box-sizing: border-box;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-@include breakpoint(tabletPortrait) {
+    padding-left: 20px;
+    padding-right: 20px;
     
-    .container {
+    @include breakpoint(tabletPortrait) {
         margin-left: auto;
         margin-right: auto;
     }
-
-}
-
-@include breakpoint(desktopMedium) {
     
-    .container {
-        max-width: 1180px;
+    @include breakpoint(desktopMedium) {
+        max-width: 1280px;
+        padding-left: 0;
+        padding-right: 0;
     }
     
+    @include breakpoint(desktopLarge) {
+        max-width: 1440px;
+    }
 }
